@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofoliu - LiveSoft Solution</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-blue-900 text-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-2">
+        <img src="img/logo.png" alt="LiveSoft Logo" class="h-8">
+        <h1 class="text-xl font-bold">LiveSoft Solution</h1>
+      </div>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:underline">Acasă</a>
+        <a href="servicii.html" class="hover:underline">Servicii</a>
+        <a href="portofoliu.html" class="hover:underline font-semibold">Portofoliu</a>
+        <a href="despre-noi.html" class="hover:underline">Despre noi</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Titlu portofoliu -->
+  <section class="bg-blue-50 py-16">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold text-blue-900 mb-4">Proiectele noastre</h2>
+      <p class="text-gray-700 text-lg max-w-2xl mx-auto">Explorează câteva dintre soluțiile noastre dezvoltate pentru clienți locali și internaționali.</p>
+    </div>
+  </section>
+
+  <!-- Proiecte -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- LiveHome -->
+      <div class="bg-white border rounded shadow hover:shadow-lg transition" x-data="{ open: false }">
+        <img src="img/livehome.png" alt="LiveHome demo" class="w-full max-h-64 object-contain mx-auto rounded-t">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-800">LiveHome</h3>
+          <p class="text-sm text-gray-600">Platformă pentru închirieri locuințe & servicii la cerere.</p>
+          <button @click="open = !open" class="text-blue-600 text-sm mt-2 hover:underline">Află mai multe</button>
+          <div x-show="open" class="mt-2 text-sm text-gray-700">Include conturi de chiriași și proprietari, filtrare inteligentă, sistem de recenzii și plăți integrate.</div>
+        </div>
+      </div>
+
+      <!-- LiveHealth -->
+      <div class="bg-white border rounded shadow hover:shadow-lg transition" x-data="{ open: false }">
+        <img src="img/livehealth.png" alt="LiveHealth demo" class="w-full max-h-64 object-contain mx-auto rounded-t">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-800">LiveHealth</h3>
+          <p class="text-sm text-gray-600">Aplicație mobilă pentru monitorizare sănătate & stil de viață.</p>
+          <button @click="open = !open" class="text-blue-600 text-sm mt-2 hover:underline">Află mai multe</button>
+          <div x-show="open" class="mt-2 text-sm text-gray-700">Funcții de tracking nutriție, sport, analize medicale, notificări personalizate și integrare cu wearables.</div>
+        </div>
+      </div>
+
+      <!-- LiveShop -->
+      <div class="bg-white border rounded shadow hover:shadow-lg transition" x-data="{ open: false }">
+        <img src="img/liveshop.png" alt="LiveShop demo" class="w-full max-h-64 object-contain mx-auto rounded-t">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-blue-800">LiveShop</h3>
+          <p class="text-sm text-gray-600">Platformă e-commerce pentru producători locali.</p>
+          <button @click="open = !open" class="text-blue-600 text-sm mt-2 hover:underline">Află mai multe</button>
+          <div x-show="open" class="mt-2 text-sm text-gray-700">Design modern, gestionare produse, stocuri și comenzi. Integrare cu metode de plată și livrare.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6">
+    <div class="container mx-auto px-6 text-center text-sm">
+      © 2025 LiveSoft Solution SRL. Toate drepturile rezervate.
+    </div>
+  </footer>
+
+</body>
+</html>
